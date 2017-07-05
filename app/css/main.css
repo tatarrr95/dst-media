@@ -1,0 +1,75 @@
+.shapka {
+  background: url("../img/shapka.png") no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  padding-bottom: 200px; }
+  .shapka .shapka-header {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    margin-bottom: 220px; }
+    .shapka .shapka-header .header-info {
+      float: right; }
+      .shapka .shapka-header .header-info .header-info-contacts, .shapka .shapka-header .header-info .header-info-right, .shapka .shapka-header .header-info img {
+        float: left; }
+        .shapka .shapka-header .header-info .header-info-contacts span, .shapka .shapka-header .header-info .header-info-contacts a, .shapka .shapka-header .header-info .header-info-right span, .shapka .shapka-header .header-info .header-info-right a, .shapka .shapka-header .header-info img span, .shapka .shapka-header .header-info img a {
+          color: #fff;
+          font-family: sansationregular;
+          font-size: 16px;
+          line-height: 16px; }
+      .shapka .shapka-header .header-info .header-info-contacts {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        max-width: 300px; }
+        .shapka .shapka-header .header-info .header-info-contacts span {
+          text-align: right;
+          display: block;
+          margin-bottom: 13px; }
+      .shapka .shapka-header .header-info .header-info-right {
+        padding-top: 8px;
+        max-width: 250px; }
+        .shapka .shapka-header .header-info .header-info-right span {
+          display: block;
+          min-width: 200px;
+          text-align: right; }
+        .shapka .shapka-header .header-info .header-info-right .header-info-right-time-text, .shapka .shapka-header .header-info .header-info-right .clock {
+          float: left; }
+        .shapka .shapka-header .header-info .header-info-right .header-info-right-time-text {
+          margin-right: 10px; }
+        .shapka .shapka-header .header-info .header-info-right .header-info-right-time {
+          margin-bottom: 14px; }
+        .shapka .shapka-header .header-info .header-info-right .header-button {
+          width: 100%;
+          border: none;
+          background: url("../img/header-button.png") no-repeat;
+          height: 45px; }
+      .shapka .shapka-header .header-info img {
+        margin-left: 20px;
+        margin-right: 20px; }
+  .shapka .shapka-center .shapka-center-inner {
+    float: left;
+    text-align: center;
+    display: inline-block; }
+    .shapka .shapka-center .shapka-center-inner .shapka-center-title {
+      font-size: 28px;
+      font-family: "Verdana";
+      color: white;
+      font-weight: bold;
+      line-height: 1.642;
+      text-align: center;
+      display: inline-block;
+      max-width: 1026px;
+      letter-spacing: 15px;
+      margin-bottom: 40px; }
+    .shapka .shapka-center .shapka-center-inner .shapka-center-subtitle {
+      font-size: 40px;
+      font-family: "Verdana";
+      color: #f2ff2a;
+      font-weight: bold;
+      line-height: 1.642;
+      text-align: center;
+      display: block;
+      letter-spacing: 15px;
+      margin-bottom: 40px; }
+    .shapka .shapka-center .shapka-center-inner img {
+      margin: auto;
+      display: block; }
