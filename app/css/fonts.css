@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'sansationbold';
+    src: url('../fonts/sansation_bold-webfont.woff2') format('woff2'),
+         url('../fonts/sansation_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sansationbold_italic';
+    src: url('../fonts/sansation_bold_italic-webfont.woff2') format('woff2'),
+         url('../fonts/sansation_bold_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sansationitalic';
+    src: url('../fonts/sansation_italic-webfont.woff2') format('woff2'),
+         url('../fonts/sansation_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sansation_lightregular';
+    src: url('../fonts/sansation_light-webfont.woff2') format('woff2'),
+         url('../fonts/sansation_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sansation_lightitalic';
+    src: url('../fonts/sansation_light_italic-webfont.woff2') format('woff2'),
+         url('../fonts/sansation_light_italic-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+
+
+@font-face {
+    font-family: 'sansationregular';
+    src: url('../fonts/sansation_regular-webfont.woff2') format('woff2'),
+         url('../fonts/sansation_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
