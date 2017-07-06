@@ -54,9 +54,11 @@ $color-grey: #4f4f4f
 				margin-left: 20px
 				margin-right: 20px
 	.shapka-center
+		display: flex
+		justify-content: space-between
 		.shapka-center-inner
 			// width: 80%
-			float: left
+			// float: left
 			text-align: center
 			display: inline-block
 			.shapka-center-title
@@ -83,3 +85,237 @@ $color-grey: #4f4f4f
 			img
 				margin: auto
 				display: block
+
+.features
+	padding-top: 100px
+	padding-bottom: 30px
+	.features-list
+		padding: 0
+		list-style: none
+		.features-item
+			width: 50%
+			float: left
+			margin-bottom: 70px
+			img
+				float: left
+				max-width: 28%
+				margin-right: 5%
+			.feature-item-inner
+				float: left
+				width: 67%
+				.feature-title
+					display: block
+					font-size: 24px
+					font-family: sansationbold
+					color: $color-pink
+					margin-bottom: 10px
+				.feature-description
+					display: block
+					color: $color-grey
+					font-size: 14px
+					font-family: Verdana
+
+.slider
+	position: relative
+	.owl-nav
+		position: absolute
+		top: 45%
+		width: 100%
+		.owl-prev
+			z-index: 9999
+			display: block
+			content: " "
+			float: left
+			background: url("../img/sprite/slider-left-arrow.png") no-repeat
+			width: 34px
+			height: 60px
+			text-indent: -9999px
+			margin-left: 15%
+		.owl-next
+			display: block
+			float: right
+			background: url("../img/sprite/slider-right-arrow.png") no-repeat
+			width: 34px
+			height: 60px
+			text-indent: -9999px
+			margin-right: 15%
+	.owl-dots
+		width: 100%
+		height: 35px
+		text-align: center
+		position: absolute
+		bottom: 5%
+		.owl-dot
+			display: inline-block
+			width: 34px
+			height: 35px
+			background: url("../img/sprite/slider-element.png") no-repeat
+			margin-right: 15px
+		.active
+			width: 34px
+			height: 35px
+			background: url("../img/sprite/slider-element-active.png") no-repeat
+		.owl-dot:last-child
+			margin: 0px
+	.slider-item
+		.slider-background
+			position: relative
+		.slider-inner
+			position: absolute
+			z-index: 9999
+			display: flex
+			justify-content: center
+			flex-direction: column
+			align-items: center
+			width: 100%
+			height: 100%
+			.text
+				font-size: 24px
+				font-family: Verdana
+				color: #fff
+				max-width: 970px
+				text-align: center
+				margin-bottom: 75px
+
+
+.possiblies
+	padding-top: 220px
+	padding-bottom: 220px
+	background: url("../img/bg-3section.png") no-repeat
+	background-size: cover
+	.big-img img
+		margin: auto
+		display: block
+	.small-images
+		display: flex
+		justify-content: space-between
+
+.uslugi
+	.row
+		display: flex
+	.left
+		background: url("../img/bg-uslugi-left.png") no-repeat
+		margin-right: 30px
+		background-size: cover
+		.half-container
+			float: right
+	.right
+		background: url("../img/bg-uslugi-right.png") no-repeat
+		margin-left: 30px
+		background-size: cover
+		.half-container
+			float: left
+			padding-left: 100px
+	.uslugi-img
+		max-width: 50%
+	.half-container
+		display: flex
+		justify-content: center
+		height: 100%
+		flex-direction: column
+	.uslugi-item
+		width: calc(50% - 30px)
+		margin-top: 30px
+		margin-bottom: 30px
+		.uslugi-title
+			color: $color-yellow
+			font-size: 34px
+			font-family: sansationbold
+			display: block
+			margin-bottom: 20px
+		.uslugi-descriptiom-list
+			list-style: none
+			padding-left: 0px
+			display: block
+			.uslugi-description-item
+				color: #fff
+				font-size: 22px
+				font-family: Verdana
+				padding-left: 1em; 
+				text-indent: -.7em;
+			.uslugi-description-item:before
+				content: "• ";
+				color: $color-yellow
+
+.banner
+	padding-top: 100px
+	padding-bottom: 100px
+	background: url("../img/bg-5section.png") no-repeat
+	background-size: cover
+	.text
+		margin-bottom: 60px
+
+
+.contacts
+	.row
+		display: flex
+	.left
+		background: url("../img/bg-contacts.png") no-repeat
+		margin-right: 30px
+		background-size: cover
+		.half-container
+			float: right
+	.contacts-map
+		max-width: 50%
+	.half-container
+		display: flex
+		justify-content: center
+		height: 100%
+		flex-direction: column
+	.uslugi-item
+		width: calc(50% - 30px)
+		margin-top: 30px
+		margin-bottom: 30px
+		.uslugi-title
+			color: #fff
+			font-size: 34px
+			font-family: sansationbold
+			display: block
+			margin-bottom: 20px
+		.uslugi-descriptiom-list
+			list-style: none
+			padding-left: 0px
+			display: block
+			.uslugi-description-item
+				color: #fff
+				font-size: 22px
+				line-height: 22px
+				font-family: Verdana
+				margin-bottom: 15px
+				p
+					margin: 0px 0px 5px 0px
+				div
+					display: inline-block
+				a
+					color: #fff
+			.uslugi-description-item:before
+				content: " "
+				background-image: url(../img/sprite/spritesheet.png)
+				background-repeat: no-repeat
+				display: inline-block
+				margin-right: 12px
+				float: left
+			.tel:before
+				width: 21px
+				height: 21px
+				background-position: -108px -34px
+			.tel a
+				color: $color-yellow
+			.mail:before
+				width: 24px
+				height: 19px
+				background-position: -108px -5px
+			.geo:before
+				width: 19px
+				height: 22px
+				background-position: -79px -5px
+			.clock:before
+				width: 22px
+				height: 22px
+				background-position: -47px -5px
+
+
+
+
+
+
