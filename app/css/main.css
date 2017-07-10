@@ -790,3 +790,121 @@ footer {
           text-align: left; } }
     footer .footer-right-side .hashtages span {
       margin-top: 0px; }
+
+.remodal-wrapper .modal-close {
+  display: block;
+  position: absolute;
+  background: url("../img/forms/close.png") no-repeat;
+  width: 32px;
+  height: 32px;
+  top: -35px;
+  right: -35px;
+  cursor: pointer; }
+
+.remodal-wrapper .modal-zvonok .title {
+  display: block;
+  font-size: 35px;
+  font-family: sansationbold;
+  color: #c92596;
+  margin-bottom: 40px; }
+  @media only screen and (max-width: 460px) {
+    .remodal-wrapper .modal-zvonok .title {
+      font-size: 28px; } }
+
+.remodal-wrapper .modal-rachet .title {
+  display: block;
+  font-size: 28px;
+  font-family: sansationbold;
+  color: #c92596;
+  margin-bottom: 40px; }
+  @media only screen and (max-width: 460px) {
+    .remodal-wrapper .modal-rachet .title {
+      font-size: 22px; } }
+
+.remodal-wrapper input {
+  height: 63px;
+  margin-bottom: 20px; }
+  @media only screen and (max-width: 460px) {
+    .remodal-wrapper input {
+      height: 35px; } }
+
+.remodal-wrapper input, .remodal-wrapper textarea {
+  outline: none;
+  width: 418px;
+  border: none;
+  padding-left: 80px;
+  padding-right: 25px;
+  font-size: 18px;
+  font-family: "Verdana"; }
+  @media only screen and (max-width: 460px) {
+    .remodal-wrapper input, .remodal-wrapper textarea {
+      width: 250px;
+      font-size: 14px;
+      padding-left: 45px; } }
+
+.remodal-wrapper input::-webkit-input-placeholder, .remodal-wrapper textarea::-webkit-input-placeholder {
+  color: #b2b2b2; }
+
+.remodal-wrapper input::-moz-placeholder, .remodal-wrapper textarea::-moz-placeholder {
+  color: #b2b2b2; }
+
+.remodal-wrapper input:-ms-input-placeholder, .remodal-wrapper textarea:-ms-input-placeholder {
+  color: #b2b2b2; }
+
+.remodal-wrapper input::placeholder, .remodal-wrapper textarea::placeholder {
+  color: #b2b2b2; }
+
+.remodal-wrapper .name {
+  background: url("../img/forms/name.png") no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain; }
+
+.remodal-wrapper .telephone {
+  background: url("../img/forms/telephone.png") no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain; }
+
+.remodal-wrapper .mail {
+  background: url("../img/forms/email.png") no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain; }
+
+.remodal-wrapper textarea {
+  padding-top: 20px;
+  background: url("../img/forms/textarea.png") no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain;
+  height: 141px;
+  resize: none;
+  overflow: auto;
+  margin-bottom: 20px; }
+  @media only screen and (max-width: 460px) {
+    .remodal-wrapper textarea {
+      padding-top: 10px;
+      height: 80px; } }
+
+.remodal-wrapper .name:focus {
+  background: url("../img/forms/name-focus.png") no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain; }
+
+.remodal-wrapper .telephone:focus {
+  background: url("../img/forms/telephone-focus.png") no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain; }
+
+.remodal-wrapper .mail:focus {
+  background: url("../img/forms/email-focus.png") no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain; }
+
+.remodal-wrapper textarea:focus {
+  background: url("../img/forms/textarea-focus.png") no-repeat;
+  -webkit-background-size: contain;
+          background-size: contain; }
+
+.remodal-wrapper .button {
+  margin-bottom: 30px; }
+  .remodal-wrapper .button img {
+    margin: auto;
+    cursor: pointer; }
