@@ -6,17 +6,47 @@ $color-yellow: #f2ff2a
 $color-pink: #c92596
 $color-grey: #4f4f4f
 
+@mixin respond-to($media)
+	@if $media == telephone
+		@media only screen and (max-width: 600px)
+			@content
+	@else if $media == tablet
+		@media only screen and (min-width: 601px) and (max-width: 1023px)
+			@content
+	@else if $media == large
+		@media only screen and (min-width: 800px) and (max-width: 1100px)
+			@content
+
 
 .shapka
-	background: url('../img/shapka.png') no-repeat
+	background: url('../img/shapka.jpg') no-repeat
 	background-size: cover
 	padding-bottom: 200px
 	.shapka-header
 		padding-top: 18px
 		padding-bottom: 18px
 		margin-bottom: 220px
+		@include respond-to(telephone)
+			margin-bottom: 110px
+		@include respond-to(tablet)
+			text-align: center
+			margin-bottom: 110px
+		.logo img
+			@include respond-to(telephone)
+				margin: auto
+			@include respond-to(tablet)
+				margin: auto
+				margin-bottom: 30px
+		.top-header-line
+			@include respond-to(telephone)
+				display: none
 		.header-info
 			float: right
+			@include respond-to(telephone)
+				float: none
+			@include respond-to(tablet)
+				float: none
+				display: inline-block
 			.header-info-contacts, .header-info-right, img
 				float: left
 				span, a
@@ -28,39 +58,69 @@ $color-grey: #4f4f4f
 				padding-top: 18px
 				padding-bottom: 18px
 				max-width: 300px
+				@include respond-to(telephone)
+					margin: auto
+					margin-top: 20px
+					max-width: 100%
+					width: 100%
+					display: block
 				span
 					text-align: right
 					display: block
 					margin-bottom: 13px
+					@include respond-to(telephone)
+						text-align: center
 			.header-info-right
 				padding-top: 8px
 				max-width: 250px
+				@include respond-to(telephone)
+					max-width: 100%
+					width: 100%
+					display: block
+					text-align: center
 				span
 					display: block
 					min-width: 200px
 					text-align: right
+					@include respond-to(telephone)
+						text-align: center
 				.header-info-right-time-text, .clock
 					float: left
 				.header-info-right-time-text
 					margin-right: 10px
 				.header-info-right-time
 					margin-bottom: 14px
+					@include respond-to(telephone)
+						text-align: center
+						display: inline-block
 				.header-button
 					width: 100%
 					border: none
-					background: url("../img/header-button.png") no-repeat
+					// background: url("../img/header-button.png") no-repeat
 					height: 45px
+					cursor: pointer
+					@include respond-to(telephone)
+						img
+							margin: auto !important
+							float: none
+
 			img
 				margin-left: 20px
 				margin-right: 20px
 	.shapka-center
 		display: flex
 		justify-content: space-between
+		.shapka-lines
+			@include respond-to(telephone)
+				display: none !important
+			@include respond-to(tablet)
+				display: none
 		.shapka-center-inner
 			// width: 80%
 			// float: left
 			text-align: center
-			display: inline-block
+			display: block
+			max-width: 100%
 			.shapka-center-title
 				font-size: 28px
 				font-family: "Verdana"
@@ -68,10 +128,13 @@ $color-grey: #4f4f4f
 				font-weight: bold
 				line-height: 1.642
 				text-align: center
-				display: inline-block
+				display: block
 				max-width: 1026px
 				letter-spacing: 15px
 				margin-bottom: 40px
+				@include respond-to(telephone)
+					font-size: 18px
+					letter-spacing: 5px
 			.shapka-center-subtitle
 				font-size: 40px
 				font-family: "Verdana"
@@ -82,9 +145,16 @@ $color-grey: #4f4f4f
 				display: block
 				letter-spacing: 15px
 				margin-bottom: 40px
+				@include respond-to(telephone)
+					font-size: 24px
+					letter-spacing: 2px
 			img
 				margin: auto
 				display: block
+				cursor: pointer
+				@include respond-to(telephone)
+					height: 50px
+
 
 .features
 	padding-top: 100px
@@ -96,6 +166,11 @@ $color-grey: #4f4f4f
 			width: 50%
 			float: left
 			margin-bottom: 70px
+			@include respond-to(telephone)
+				width: 100%
+			@include respond-to(tablet)
+				width: 45%
+				margin-right: 2%
 			img
 				float: left
 				max-width: 28%
@@ -109,6 +184,8 @@ $color-grey: #4f4f4f
 					font-family: sansationbold
 					color: $color-pink
 					margin-bottom: 10px
+					@include respond-to(telephone)
+						font-size: 21px
 				.feature-description
 					display: block
 					color: $color-grey
@@ -181,18 +258,47 @@ $color-grey: #4f4f4f
 .possiblies
 	padding-top: 220px
 	padding-bottom: 220px
-	background: url("../img/bg-3section.png") no-repeat
+	background: url("../img/bg-3section.jpg") no-repeat
 	background-size: cover
+	@include respond-to(tablet)
+		padding-left: 20px
+		padding-right: 20px
+	@include respond-to(telephone)
+		padding-top: 100px
+		padding-bottom: 100px
+	.big-img
+		@include respond-to(telephone)
+			max-width: 95%
+			margin: auto
+		@include respond-to(tablet)
+			max-width: 95%
+			margin: auto
 	.big-img img
 		margin: auto
 		display: block
 	.small-images
 		display: flex
 		justify-content: space-between
+		@include respond-to(telephone)
+			height: auto
+			display: block
+		.small-image
+			max-width: 47%
+			cursor: pointer
+			@include respond-to(telephone)
+				margin: auto
+				max-width: 90%
+				margin-bottom: 20px
 
 .uslugi
+	@include respond-to(telephone)
+		display: none
+	@include respond-to(tablet)
+		display: none
 	.row
 		display: flex
+		@include respond-to(telephone)
+			display: block
 	.left
 		background: url("../img/bg-uslugi-left.png") no-repeat
 		margin-right: 30px
@@ -208,6 +314,7 @@ $color-grey: #4f4f4f
 			padding-left: 100px
 	.uslugi-img
 		max-width: 50%
+		@include respond-to(telephone)
 	.half-container
 		display: flex
 		justify-content: center
@@ -217,6 +324,7 @@ $color-grey: #4f4f4f
 		width: calc(50% - 30px)
 		margin-top: 30px
 		margin-bottom: 30px
+		@include respond-to(telephone)
 		.uslugi-title
 			color: $color-yellow
 			font-size: 34px
@@ -237,41 +345,121 @@ $color-grey: #4f4f4f
 				content: "• ";
 				color: $color-yellow
 
+
+.uslugi-forTelephone
+	@media only screen and (min-width: 1023px)
+		display: none
+	.row
+		display: block
+	.left
+		background: url("../img/bg-uslugi-left.png") no-repeat
+		// background-size: cover
+		background-position: top
+	.right
+		background: url("../img/bg-uslugi-right.png") no-repeat
+		margin-left: 30px
+		// background-size: cover
+		background-position: 0px 30px
+		.half-container
+			float: left
+			padding-left: 100px
+	.uslugi-img
+		max-width: 100%
+	.half-container
+		padding: 15px
+	.uslugi-item
+		width: 100%
+		.uslugi-title
+			color: $color-yellow
+			font-size: 28px
+			font-family: sansationbold
+			display: block
+			margin-bottom: 20px
+		.uslugi-descriptiom-list
+			list-style: none
+			padding-left: 0px
+			display: block
+			.uslugi-description-item
+				color: #fff
+				font-size: 16px
+				font-family: Verdana
+				padding-left: 1em; 
+				text-indent: -.7em;
+			.uslugi-description-item:before
+				content: "• ";
+				color: $color-yellow
+
+.slider2
+	@include respond-to(telephone)
+		display: none
+	@include respond-to(tablet)
+		display: none
+
+
 .banner
 	padding-top: 100px
 	padding-bottom: 100px
-	background: url("../img/bg-5section.png") no-repeat
+	background: url("../img/bg-5section.jpg") no-repeat
 	background-size: cover
 	.text
 		margin-bottom: 60px
+	.button
+		cursor: pointer
 
 
 .contacts
 	.row
 		display: flex
+		@include respond-to(telephone)
+			display: block
+		@include respond-to(tablet)
+			display: block
 	.left
 		background: url("../img/bg-contacts.png") no-repeat
 		margin-right: 30px
 		background-size: cover
 		.half-container
 			float: right
+			@include respond-to(telephone)
+				float: left
+				margin-left: 20px
+			@include respond-to(tablet)
+				float: left
+				margin-left: 20px
 	.contacts-map
 		max-width: 50%
+		@include respond-to(telephone)
+			max-width: 100%
+		@include respond-to(tablet)
 	.half-container
 		display: flex
 		justify-content: center
 		height: 100%
 		flex-direction: column
 	.uslugi-item
-		width: calc(50% - 30px)
+		width: 100%
 		margin-top: 30px
 		margin-bottom: 30px
+		@include respond-to(telephone)
+			margin: 0px
+			padding: 15px
+			padding-top: 50px
+			padding-bottom: 50px
+		@include respond-to(tablet)
+			margin: 0px
+			padding: 15px
+			padding-top: 50px
+			padding-bottom: 50px
 		.uslugi-title
 			color: #fff
 			font-size: 34px
 			font-family: sansationbold
 			display: block
 			margin-bottom: 20px
+			@include respond-to(telephone)
+				font-size: 30px
+			@include respond-to(tablet)
+				font-size: 30px
 		.uslugi-descriptiom-list
 			list-style: none
 			padding-left: 0px
@@ -282,6 +470,12 @@ $color-grey: #4f4f4f
 				line-height: 22px
 				font-family: Verdana
 				margin-bottom: 15px
+				@include respond-to(telephone)
+					font-size: 16px
+					line-height: 16px
+				@include respond-to(tablet)
+					font-size: 16px
+					line-height: 16px
 				p
 					margin: 0px 0px 5px 0px
 				div
@@ -313,6 +507,171 @@ $color-grey: #4f4f4f
 				width: 22px
 				height: 22px
 				background-position: -47px -5px
+	.button
+		img
+			cursor: pointer
+
+.index-form
+	padding-top: 120px
+	padding-bottom: 120px
+	.index-form-title
+		display: block
+		margin: auto
+		font-size: 47px
+		font-family: "sansationbold"
+		color: $color-pink
+		margin-bottom: 20px
+		text-align: center
+		@include respond-to(telephone)
+			font-size: 28px
+	.index-form-subtitle
+		display: block
+		margin: auto
+		font-size: 19px
+		font-family: "Verdana"
+		color: #4f4f4f
+		margin-bottom: 50px
+		text-align: center
+		@include respond-to(telephone)
+			font-size: 16px
+	form
+		display: flex
+		@include respond-to(telephone)
+			display: block
+		@include respond-to(tablet)
+			display: block
+		input
+			width: 377px
+			height: 62px
+			border: 0px
+			background-size: cover
+			margin-right: 14px
+			outline: none
+			padding-left: 80px
+			padding-right: 20px
+			font-size: 18px
+			font-family: Verdana
+			@include respond-to(telephone)
+				max-width: 288px
+				margin: auto
+				margin-bottom: 20px
+				height: 47px
+				background-size: cover !important
+				display: block
+				padding-left: 60px
+				font-size: 15px
+			@include respond-to(tablet)
+				margin: auto
+				display: block
+				margin-bottom: 20px
+		input::placeholder
+			font-size: 18px
+			font-family: Verdana
+			color: #b2b2b2
+			@include respond-to(telephone)
+				font-size: 15px
+		.input-name
+			background: url("../img/form-input-border-name.png") no-repeat
+		.input-name:focus
+			background: url("../img/form-input-border-name-focus.png") no-repeat
+		.input-telephone
+			background: url("../img/form-input-border-telephone.png") no-repeat
+		.input-telephone:focus
+			background: url("../img/form-input-border-telephone-focus.png") no-repeat
+		.button
+			display: inline-block
+			img
+				cursor: pointer
+			@include respond-to(telephone)
+				max-width: 90%
+				margin: auto
+				display: block
+				img
+					margin: auto
+			@include respond-to(tablet)
+				display: block
+				img
+					margin: auto
+					display: block
+
+
+
+footer
+	padding-top: 100px
+	padding-bottom: 100px
+	background: url("../img/bg-footer.jpg") no-repeat
+	background-size: cover
+	.footer-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+		@include respond-to(telephone)
+			display: block
+			text-align: center
+		@include respond-to(tablet)
+			display: block
+			text-align: center
+	.logo
+		@include respond-to(telephone)
+			max-width: 80%
+			margin: auto
+			margin-bottom: 30px
+			img
+				margin: auto
+		@include respond-to(tablet)
+			max-width: 80%
+			margin: auto
+			margin-bottom: 30px
+			img
+				margin: auto
+	.footer-line
+		@include respond-to(telephone)
+			display: none
+		@include respond-to(tablet)
+			display: none
+	.footer-center
+		font-size: 32px
+		font-family: "sansationbold"
+		max-width: 270px
+		display: block
+		color: #fff
+		@include respond-to(telephone)
+			margin: auto
+			font-size: 26px
+			margin-bottom: 30px
+		@include respond-to(tablet)
+			margin: auto
+			font-size: 26px
+			margin-bottom: 30px
+	.footer-right-side
+		display: inline-block
+		.instagram-icon, .hashtages
+			float: left
+		.instagram-icon
+			margin-right: 15px
+		.hashtages
+			p, span
+				color: #fff
+				font-size: 22px
+				font-family: "Verdana"
+				line-height: 23px
+				margin-top: 10px
+				margin-bottom: 0px
+				display: block
+				@include respond-to(telephone)
+					font-size: 16px
+					text-align: left
+				@include respond-to(tablet)
+					font-size: 16px
+					text-align: left
+			span
+				margin-top: 0px
+
+
+
+
+
+
 
 
 
