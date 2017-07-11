@@ -59,7 +59,7 @@
             <div class="shapka-center">
                 <img class="img-responsive shapka-lines" src="img/shapka-left-lines.png" alt="">
                 <div class="shapka-center-inner">
-                    <span class="shapka-center-title">Спасибо! Ваша заявка будет рассмотрена в ближайшее время!</span>
+                    <span class="shapka-center-title">Мы получили вашу заявку, спасибо. Наш менеджер свяжется с вами</span>
                     <span class="shapka-center-subtitle"><a href="/">Вернуться на главную</a></span>
                     <img class="img-responsive hvr-buzz-out v-modal-zvonok" src="img/button-shapka.png" alt="">
                 </div>
