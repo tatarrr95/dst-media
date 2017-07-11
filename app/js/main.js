@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+    // Слайдеры
     $(".first-slider").owlCarousel({
         items: 1,
         nav: true,
@@ -12,6 +13,7 @@ jQuery(document).ready(function($) {
         dots: true
     });
 
+    // Яндекс-карты
     ymaps.ready(function() {
         var e = new ymaps.Map("Map", {
                 center: [43.101423, 131.94487],
@@ -36,8 +38,16 @@ jQuery(document).ready(function($) {
                 iconImageOffset: [-33, -42]
             });
         o.add(new ymaps.Placemark(s)), e.geoObjects.add(o)
+
+
+        // Маски
+        $('#rachet-telephone').mask('+ 7 (000) 000-00-00');
+        $('#zvonok-telephone').mask('+ 7 (000) 000-00-00');
+        $('#telephone').mask('+ 7 (000) 000-00-00');
     });
-    
+
+
+    // модальные окна
     $("body").on('click', '.v-modal-zvonok', function(event) {
         event.preventDefault();
         var inst = $("[data-remodal-id=modal-zvonok]").remodal();
@@ -50,4 +60,43 @@ jQuery(document).ready(function($) {
         var inst = $("[data-remodal-id=modal-rachet]").remodal();
         inst.open();
     });
+
+
+
+
 });
+
+
+// Функции отправки
+// function sendMessageZvonok() {
+//     $.ajax({
+//         type: "POST",
+//         url: "send.php",
+//         data: $("#zvonok_form").serialize(),
+//         success: function() {
+//             window.location = "http://dstmedia.tmweb.ru/success.html"
+//         }
+//     })
+// }
+
+// function sendMessageRachet() {
+//     $.ajax({
+//         type: "POST",
+//         url: "send.php",
+//         data: $("#rachet_form").serialize(),
+//         success: function() {
+//             window.location = "http://dstmedia.tmweb.ru/success.html"
+//         }
+//     })
+// }
+
+// function sendMessageIndex() {
+//     $.ajax({
+//         type: "POST",
+//         url: "send.php",
+//         data: $("#index_form").serialize(),
+//         success: function() {
+//             window.location = "http://dstmedia.tmweb.ru/success.html"
+//         }
+//     })
+// }

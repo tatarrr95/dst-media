@@ -22,10 +22,15 @@ $color-grey: #4f4f4f
 	background: url('../img/shapka.jpg') no-repeat
 	background-size: cover
 	padding-bottom: 200px
+	@media only screen and (min-height: 650px)
+		height: 100vh
+		padding-bottom: 0px
 	.shapka-header
 		padding-top: 18px
 		padding-bottom: 18px
 		margin-bottom: 220px
+		@media only screen and (min-height: 650px)
+			margin-bottom: 20vh
 		@include respond-to(telephone)
 			margin-bottom: 110px
 		@include respond-to(tablet)
@@ -135,7 +140,7 @@ $color-grey: #4f4f4f
 				@include respond-to(telephone)
 					font-size: 18px
 					letter-spacing: 5px
-			.shapka-center-subtitle
+			.shapka-center-subtitle, .shapka-center-subtitle a
 				font-size: 40px
 				font-family: "Verdana"
 				color: $color-yellow
@@ -580,6 +585,8 @@ $color-grey: #4f4f4f
 			background: url("../img/form-input-border-telephone-focus.png") no-repeat
 		.button
 			display: inline-block
+			border: none
+			background: none
 			img
 				cursor: pointer
 			@include respond-to(telephone)
@@ -749,6 +756,8 @@ footer
 		background-size: contain
 	.button
 		margin-bottom: 30px
+		background: none
+		border: none
 		img
 			margin: auto
 			cursor: pointer

@@ -4,10 +4,17 @@
   -webkit-background-size: cover;
           background-size: cover;
   padding-bottom: 200px; }
+  @media only screen and (min-height: 650px) {
+    .shapka {
+      height: 100vh;
+      padding-bottom: 0px; } }
   .shapka .shapka-header {
     padding-top: 18px;
     padding-bottom: 18px;
     margin-bottom: 220px; }
+    @media only screen and (min-height: 650px) {
+      .shapka .shapka-header {
+        margin-bottom: 20vh; } }
     @media only screen and (max-width: 600px) {
       .shapka .shapka-header {
         margin-bottom: 110px; } }
@@ -131,7 +138,7 @@
           .shapka .shapka-center .shapka-center-inner .shapka-center-title {
             font-size: 18px;
             letter-spacing: 5px; } }
-      .shapka .shapka-center .shapka-center-inner .shapka-center-subtitle {
+      .shapka .shapka-center .shapka-center-inner .shapka-center-subtitle, .shapka .shapka-center .shapka-center-inner .shapka-center-subtitle a {
         font-size: 40px;
         font-family: "Verdana";
         color: #f2ff2a;
@@ -142,7 +149,7 @@
         letter-spacing: 15px;
         margin-bottom: 40px; }
         @media only screen and (max-width: 600px) {
-          .shapka .shapka-center .shapka-center-inner .shapka-center-subtitle {
+          .shapka .shapka-center .shapka-center-inner .shapka-center-subtitle, .shapka .shapka-center .shapka-center-inner .shapka-center-subtitle a {
             font-size: 24px;
             letter-spacing: 2px; } }
       .shapka .shapka-center .shapka-center-inner img {
@@ -686,7 +693,9 @@
     .index-form form .input-telephone:focus {
       background: url("../img/form-input-border-telephone-focus.png") no-repeat; }
     .index-form form .button {
-      display: inline-block; }
+      display: inline-block;
+      border: none;
+      background: none; }
       .index-form form .button img {
         cursor: pointer; }
       @media only screen and (max-width: 600px) {
@@ -904,7 +913,9 @@ footer {
           background-size: contain; }
 
 .remodal-wrapper .button {
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  background: none;
+  border: none; }
   .remodal-wrapper .button img {
     margin: auto;
     cursor: pointer; }
