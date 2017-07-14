@@ -61,7 +61,6 @@
                 <div class="shapka-center-inner">
                     <span class="shapka-center-title">Мы получили вашу заявку, спасибо. Наш менеджер свяжется с вами</span>
                     <span class="shapka-center-subtitle"><a href="/">Вернуться на главную</a></span>
-                    <img class="img-responsive hvr-buzz-out v-modal-zvonok" src="img/button-shapka.png" alt="">
                 </div>
                 <img class="img-responsive shapka-lines" src="img/shapka-right-lines.png" alt="">
             </div>
@@ -93,14 +92,14 @@ if(isset($_POST['name'])){
     	$email = $_POST['email'];
     	$textarea = $_POST['textarea'];
     	$title = "Поступила заявка на РАСЧЕТ с сайта DST-Media.ru";
-    	$message = "Данные пользователя:<br><p><strong>Имя:</strong></p>".$name."<p><strong>Телефон:</strong></p>".$telephone."<p><strong>E-mail</strong></p>".$email."<p><strong>Сообщение</strong></p>".$textarea;
+    	$message = "Данные пользователя:<br><p><strong>Имя: </strong>".$name."</p><p><strong>Телефон: </strong>".$telephone."</p><p><strong>E-mail: </strong>".$email."</p><p><strong>Сообщение </strong>".$textarea."</p>";
     }
     else{
     	$name = $_POST['name'];
     	$telephone = $_POST['telephone'];
     	$email = $_POST['email'];
     	$title = "Поступила заявка на ЗВОНОК с сайта DST-Media.ru";
-    	$message = "Данные пользователя:<br><p><strong>Имя:</strong></p>".$name."<p><strong>Телефон:</strong></p>".$telephone."<p><strong>E-mail</strong></p>".$email;
+    	$message = "Данные пользователя:<br><p><strong>Имя: </strong>".$name."</p><p><strong>Телефон: </strong>".$telephone."</p><p><strong>E-mail: </strong>".$email."</p>";
     }
 
     

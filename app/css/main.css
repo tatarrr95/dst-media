@@ -1,8 +1,5 @@
 @charset "UTF-8";
 .shapka {
-  background: url("../img/shapka.jpg") no-repeat;
-  -webkit-background-size: cover;
-          background-size: cover;
   padding-bottom: 200px; }
   @media only screen and (min-height: 650px) {
     .shapka {

@@ -1,3 +1,34 @@
+if(window.innerHeight > 650){
+        $('.shapka').vide({
+            mp4: "../video/video.mp4",
+            webm: "../video/video.webm",
+            ogv: "../video/video.ogv",
+            poster: "../video/video.jpg"
+        }, {
+            muted: true,
+            loop: true,
+            autoplay: true,
+            position: '50% 50%', // Similar to the CSS `background-position` property.
+            posterType: 'detect', // Poster image type. "detect" — auto-detection; "none" — no poster; "jpg", "png", "gif",... - extensions.
+            resizing: true, // Auto-resizing, read: https://github.com/VodkaBears/Vide#resizing
+            bgColor: 'transparent' // Allow custom background-color for Vide div,
+        });
+        $('.shapka').css({
+            background:" -moz-linear-gradient(top, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0) 100%)",
+            background: "-webkit-linear-gradient(top, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0) 100%)",
+            background: "linear-gradient(to bottom, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0) 100%)",
+            filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )"
+        });
+        console.log(">650");
+      }
+      else{
+        $('.shapka').css({
+            background: "url('../img/shapka.jpg') no-repeat",
+            "background-size": 'cover'
+        });
+        console.log("<650")
+      }
+
 jQuery(document).ready(function($) {
     // Слайдеры
     $(".first-slider").owlCarousel({
@@ -61,10 +92,35 @@ jQuery(document).ready(function($) {
         inst.open();
     });
 
-
-
-
+    console.log(window.innerHeight);
 });
+
+
+// $(window).load(function() {
+//       if(window.innerHeight > 650){
+//         $('.shapka').vide({
+//             mp4: video/video.mp4,
+//             webm: video/video.mp4,
+//             ogv: pvideo/video.mp4
+//         }, {
+//             muted: true,
+//             loop: true,
+//             autoplay: true,
+//             position: '50% 50%', // Similar to the CSS `background-position` property.
+//             posterType: 'detect', // Poster image type. "detect" — auto-detection; "none" — no poster; "jpg", "png", "gif",... - extensions.
+//             resizing: true, // Auto-resizing, read: https://github.com/VodkaBears/Vide#resizing
+//             bgColor: 'transparent' // Allow custom background-color for Vide div,
+//         });
+//         console.log(">650");
+//       }
+//       else{
+//         $('.shapka').css({
+//             // background: "url('../img/shapka.jpg') no-repeat",
+//             // background-size: 'cover'
+//         });
+//         console.log("<650")
+//       }
+// });
 
 
 // Функции отправки

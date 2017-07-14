@@ -406,7 +406,7 @@
             <div class="row">
                 <span class="index-form-title">ЗАКАЖИТЕ ВЫЕЗД МЕНЕДЖЕРА С ОБРАЗЦАМИ</span>
                 <span class="index-form-subtitle">Наш специалист приедет в удобное для вас время, проконсультирует и сделает расчет заказа на месте</span>
-                <form id="index_form" action="send.php" method="POST">
+                <form id="index_form" action="send.php" method="POST" onsubmit="_gaq.push(['_trackEvent', 'Forma', 'Zvonok']);yaCounter45283071.reachGoal('ZVONOK');">
                     <input type="text" id="name" class="input-name" name="name" placeholder="Как Вас Зовут?" name="name" required>
                     <input type="text" id="telephone" class="input-telephone" name="telephone" placeholder="Номер вашего телефона?" name="telephone" required>
                     <button type="submit" class="button"><img class="img-responsive hvr-buzz-out" src="img/button-form.png" alt=""></button>
@@ -442,7 +442,7 @@
     <div class="remodal modal-zvonok" data-remodal-id="modal-zvonok" data-remodal-options="hashTracking: false">
         <div data-remodal-action="close" class="modal-close"></div>
         <span class="title">Оставьте контактные данные, и мы Вам перезвоним</span>
-        <form id="zvonok_form" action="send.php" method="POST" onsubmit="yaCounter45283071.reachGoal('ORDER')">
+        <form id="zvonok_form" action="send.php" method="POST" onsubmit="yaCounter45283071.reachGoal('ZVONOK'); _gaq.push(['_trackEvent', 'Forma', 'Zvonok']);">
             <input type="text" class="name" id="zvonok-name" placeholder="Как Вас зовут?" name="name" required>
             <input type="text" class="telephone" id="zvonok-telephone" placeholder="Номер вашего телефона?" name="telephone" required>
             <input type="email" class="mail" id="zvonok-mail" placeholder="Ваш E-mail?" name="email"">
@@ -455,7 +455,7 @@
     <div class="remodal modal-rachet" data-remodal-id="modal-rachet" data-remodal-options="hashTracking: false">
         <div data-remodal-action="close" class="modal-close"></div>
         <span class="title">Заполните данную форму, и наш специалист свяжется с Вами, чтобы уточнить детали заказа и рассчитать стоимость заказа.</span>
-        <form id="rachet_form" action="send.php" method="POST">
+        <form id="rachet_form" action="send.php" method="POST" onsubmit="yaCounter45283071.reachGoal('RACHET'); _gaq.push(['_trackEvent', 'Forma', 'Rachet']);">
             <input type="text" class="name" id="rachet-name" placeholder="Как Вас зовут?" name="name" required>
             <input type="text" class="telephone" id="rachet-telephone" placeholder="Номер вашего телефона?" name="telephone" required>
             <input type="email" class="mail" id="rachet-mail" placeholder="Ваш E-mail?" name="email">
@@ -483,6 +483,7 @@
     <script src="bower/remodal/dist/remodal.js"></script>
     <!-- endbower -->
     <script src="bower/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+    <script src="bower/vide/dist/jquery.vide.min.js"></script>
     <!-- endbuild -->
     <!-- build:js scripts/main.js -->
     <script src="js/main.js"></script>
