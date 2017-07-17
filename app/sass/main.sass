@@ -13,14 +13,17 @@ $color-grey: #4f4f4f
 	@else if $media == tablet
 		@media only screen and (min-width: 601px) and (max-width: 1023px)
 			@content
+	@else if $media == notebook
+		@media only screen and (max-width: 1400px)
+			@content
 	@else if $media == large
 		@media only screen and (min-width: 800px) and (max-width: 1100px)
 			@content
 
 
 .shapka
-	// background: url('../img/shapka.jpg') no-repeat
-	// background-size: cover
+	background: url('../img/shapka1.png') no-repeat
+	background-size: cover
 	padding-bottom: 200px
 	@media only screen and (min-height: 650px)
 		height: 100vh
@@ -199,6 +202,11 @@ $color-grey: #4f4f4f
 
 .slider
 	position: relative
+	// max-height: 100vh
+	.owl-carousel, .owl-stage-outer, .owl-stage
+		// max-height: 100vh
+	img
+		max-height: 100vh
 	.owl-nav
 		position: absolute
 		top: 45%
@@ -212,7 +220,7 @@ $color-grey: #4f4f4f
 			width: 34px
 			height: 60px
 			text-indent: -9999px
-			margin-left: 15%
+			margin-left: 10%
 		.owl-next
 			display: block
 			float: right
@@ -220,7 +228,7 @@ $color-grey: #4f4f4f
 			width: 34px
 			height: 60px
 			text-indent: -9999px
-			margin-right: 15%
+			margin-right: 10%
 	.owl-dots
 		width: 100%
 		height: 35px
@@ -251,6 +259,10 @@ $color-grey: #4f4f4f
 			align-items: center
 			width: 100%
 			height: 100%
+			.inner-img
+				margin-bottom: 70px
+				@include respond-to(notebook)
+					margin-bottom: 40px
 			.text
 				font-size: 24px
 				font-family: Verdana
@@ -258,6 +270,28 @@ $color-grey: #4f4f4f
 				max-width: 970px
 				text-align: center
 				margin-bottom: 75px
+				.slider-title
+					display: block
+					margin-bottom: 70px
+					font-size: 28px
+					text-transform: uppercase
+					@include respond-to(notebook)
+						font-size: 23px
+						margin-bottom: 40px
+				.slider-description
+					display: block
+					margin-bottom: 70px
+					font-size: 20px
+					@include respond-to(notebook)
+						font-size: 16px
+						margin-bottom: 40px
+				.slider-contacts
+					font-size: 18px
+					display: flex
+					justify-content: space-around
+					@include respond-to(notebook)
+						font-size: 14px
+					.slider-contacts-item
 
 
 .possiblies
@@ -308,12 +342,14 @@ $color-grey: #4f4f4f
 		background: url("../img/bg-uslugi-left.png") no-repeat
 		margin-right: 30px
 		background-size: cover
+		background-position: bottom right
 		.half-container
 			float: right
 	.right
 		background: url("../img/bg-uslugi-right.png") no-repeat
 		margin-left: 30px
 		background-size: cover
+		background-position: bottom left
 		.half-container
 			float: left
 			padding-left: 100px
@@ -336,6 +372,8 @@ $color-grey: #4f4f4f
 			font-family: sansationbold
 			display: block
 			margin-bottom: 20px
+			@include respond-to(notebook)
+				font-size: 24px
 		.uslugi-descriptiom-list
 			list-style: none
 			padding-left: 0px
@@ -346,9 +384,37 @@ $color-grey: #4f4f4f
 				font-family: Verdana
 				padding-left: 1em; 
 				text-indent: -.7em;
+				@include respond-to(notebook)
+					font-size: 16px
 			.uslugi-description-item:before
 				content: "• ";
 				color: $color-yellow
+	.uslugi-slider
+		width: 50%
+		position: relative
+		.owl-nav
+			position: absolute
+			top: 45%
+			width: 100%
+			.owl-prev
+				z-index: 9999
+				display: block
+				content: " "
+				float: left
+				background: url("../img/sprite/slider-left-arrow.png") no-repeat
+				width: 34px
+				height: 60px
+				text-indent: -9999px
+				margin-left: 5%
+			.owl-next
+				display: block
+				float: right
+				background: url("../img/sprite/slider-right-arrow.png") no-repeat
+				width: 34px
+				height: 60px
+				text-indent: -9999px
+				margin-right: 5%
+
 
 
 .uslugi-forTelephone
@@ -370,6 +436,30 @@ $color-grey: #4f4f4f
 			padding-left: 100px
 	.uslugi-img
 		max-width: 100%
+	.uslugi-slider
+		max-width: 100%
+		.owl-nav
+			position: absolute
+			top: 45%
+			width: 100%
+			.owl-prev
+				z-index: 9999
+				display: block
+				content: " "
+				float: left
+				background: url("../img/sprite/slider-left-arrow.png") no-repeat
+				width: 34px
+				height: 60px
+				text-indent: -9999px
+				margin-left: 5%
+			.owl-next
+				display: block
+				float: right
+				background: url("../img/sprite/slider-right-arrow.png") no-repeat
+				width: 34px
+				height: 60px
+				text-indent: -9999px
+				margin-right: 5%
 	.half-container
 		padding: 15px
 	.uslugi-item
@@ -423,6 +513,7 @@ $color-grey: #4f4f4f
 		background: url("../img/bg-contacts.png") no-repeat
 		margin-right: 30px
 		background-size: cover
+		background-position: bottom right
 		.half-container
 			float: right
 			@include respond-to(telephone)
@@ -462,9 +553,11 @@ $color-grey: #4f4f4f
 			display: block
 			margin-bottom: 20px
 			@include respond-to(telephone)
-				font-size: 30px
+				font-size: 24px
 			@include respond-to(tablet)
-				font-size: 30px
+				font-size: 24px
+			@include respond-to(notebook)
+				font-size: 24
 		.uslugi-descriptiom-list
 			list-style: none
 			padding-left: 0px
@@ -479,6 +572,9 @@ $color-grey: #4f4f4f
 					font-size: 16px
 					line-height: 16px
 				@include respond-to(tablet)
+					font-size: 16px
+					line-height: 16px
+				@include respond-to(notebook)
 					font-size: 16px
 					line-height: 16px
 				p

@@ -14,16 +14,14 @@ if(window.innerHeight > 650){
             bgColor: 'transparent' // Allow custom background-color for Vide div,
         });
         $('.shapka').css({
-            background:" -moz-linear-gradient(top, rgba(0,0,0,0.65) 25%, rgba(0,0,0,0) 100%)",
-            background: "-webkit-linear-gradient(top, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0) 100%)",
-            background: "linear-gradient(to bottom, rgba(0,0,0,0.65) 25%,rgba(0,0,0,0) 100%)",
-            filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 )"
+            background: "url('img/shapka1.png') no-repeat",
+            "background-size": "cover"
         });
         console.log(">650");
       }
       else{
         $('.shapka').css({
-            background: "url('../img/shapka.jpg') no-repeat",
+            background: "url('img/shapka.jpg') no-repeat",
             "background-size": 'cover'
         });
         console.log("<650")
@@ -42,6 +40,30 @@ jQuery(document).ready(function($) {
         nav: true,
         loop: true,
         dots: true
+    });
+    $(".uslugi-slider-polygrafi").owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+        dots: false
+    });
+    $(".uslugi-slider-otdelka").owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+        dots: false
+    });
+    $(".uslugi-slider-design").owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+        dots: false
+    });
+    $(".uslugi-slider-suvenires").owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+        dots: false
     });
 
     // Яндекс-карты
