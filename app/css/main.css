@@ -1,4 +1,8 @@
 @charset "UTF-8";
+@media only screen and (max-width: 600px) {
+  .telNoDisplay {
+    display: none; } }
+
 .shapka {
   background: url("../img/shapka1.png") no-repeat;
   -webkit-background-size: cover;

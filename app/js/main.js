@@ -65,6 +65,12 @@ jQuery(document).ready(function($) {
         loop: true,
         dots: false
     });
+    $(".uslugi-slider-narreklama").owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+        dots: false
+    });
 
     // Яндекс-карты
     ymaps.ready(function() {
